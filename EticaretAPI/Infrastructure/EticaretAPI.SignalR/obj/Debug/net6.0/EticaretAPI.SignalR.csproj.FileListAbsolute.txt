@@ -1,0 +1,17 @@
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\bin\Debug\net6.0\EticaretAPI.SignalR.deps.json
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\bin\Debug\net6.0\EticaretAPI.SignalR.dll
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\bin\Debug\net6.0\EticaretAPI.SignalR.pdb
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\bin\Debug\net6.0\EticaretAPI.Application.dll
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\bin\Debug\net6.0\EticaretAPI.Domain.dll
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\bin\Debug\net6.0\EticaretAPI.Application.pdb
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\bin\Debug\net6.0\EticaretAPI.Domain.pdb
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\EticaretAPI.SignalR.csproj.AssemblyReference.cache
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\EticaretAPI.SignalR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\EticaretAPI.SignalR.AssemblyInfoInputs.cache
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\EticaretAPI.SignalR.AssemblyInfo.cs
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\EticaretAPI.SignalR.csproj.CoreCompileInputs.cache
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\EticaretAPI.SignalR.csproj.CopyComplete
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\EticaretAPI.SignalR.dll
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\refint\EticaretAPI.SignalR.dll
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\EticaretAPI.SignalR.pdb
+C:\Users\fls20\OneDrive\Masaüstü\AngularEticaretMvc\EticaretAPI\Infrastructure\EticaretAPI.SignalR\obj\Debug\net6.0\ref\EticaretAPI.SignalR.dll
