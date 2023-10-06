@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AiFIjhEr3l2DFpMOxt3PE43CiDSDN6jAE4ytyrLDnWQ=",
+  "Hash": "aoK0Q1AyiGJZK4hYuKbXKD3+koplPJ0Z31njoNzaBx8=",
   "Source": "EticaretAPI.Presentation",
   "BasePath": "_content/EticaretAPI.Presentation",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\photo-images\\Gorkem-jpeg-3728fcf0-6b85-4f0e-9782-ffecd1f41b5d.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg",
+      "SourceId": "EticaretAPI.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "BasePath": "_content/EticaretAPI.Presentation",
+      "RelativePath": "photo-images/Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\photo-images\\Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg"
     },
     {
       "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-a7163b9b-2a95-46ad-8381-31b25c991107.jpeg",

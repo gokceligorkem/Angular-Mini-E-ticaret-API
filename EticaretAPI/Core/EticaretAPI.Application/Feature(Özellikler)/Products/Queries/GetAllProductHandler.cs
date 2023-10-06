@@ -26,11 +26,12 @@ namespace EticaretAPI.Application.Feature_Özellikler_.Products.Queries
         {
             _looger.LogInformation("Tüm ürünler listelendi");
             
-            var totalCount = _productReadRepository.GetAll(false).Count();
+            var totalProductCount = _productReadRepository.GetAll(false).Count();
 
             var products = _productReadRepository.GetAll(false)
             .Skip(request.Page * request.Size) 
             .Take(request.Size) 
+            .Include(p => p.FilesImage)
             .Select(p => new
             {
                 p.ID,
@@ -39,13 +40,14 @@ namespace EticaretAPI.Application.Feature_Özellikler_.Products.Queries
                 p.Price,
                 p.CreatedTime,
                 p.UpdatedTime,
+                p.FilesImage
             })
             .ToList();
 
             return new ()
             {
                 products = products,
-                totalCount = totalCount
+                totalProductCount = totalProductCount
             };
         }
     }

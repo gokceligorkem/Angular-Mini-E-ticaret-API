@@ -8,7 +8,7 @@ namespace EticaretAPI.Application.Feature_Özellikler_.Products.Queries
 {
     public class GetAllProductQueryResponse
     {
-        public int totalCount { get; set; }
+        public int totalProductCount { get; set; }
         public object products { get; set; }
     }
 }

@@ -9,12 +9,13 @@ using EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.Upload
 using EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.RemoveProductImage;
 using EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.GetProductImage;
 using Microsoft.AspNetCore.Authorization;
+using EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.ChangeShowCaseImage;
 
 namespace EticaretAPI.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes ="Admin")]
+  
     public class ProductsController : ControllerBase
     {
 
@@ -39,24 +40,28 @@ namespace EticaretAPI.Presentation.Controllers
         }
 
         [HttpPost]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> Post(CreateProductCommandRequest createProductCommandRequest)
         {
             CreateProductCommandResponse response = await _mediatR.Send(createProductCommandRequest);
             return Ok(response);
         }
         [HttpPut]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> Put([FromBody] UpdateProductCommanRequest updateProductCommanRequest)
         {
             UpdateProductCommanResponse response = await _mediatR.Send(updateProductCommanRequest);
             return Ok(response);
         }
         [HttpDelete("{id}")]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> Remove([FromRoute] DeleteProductCommandRequest deleteProductCommandRequest)
         {
             DeleteProductCommandResponse response = await _mediatR.Send(deleteProductCommandRequest);
             return Ok(response);
         }
         [HttpPost("[action]")]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult> Upload([FromQuery] UploadProductCommandRequest uploadProductCommandRequest)
         {
 
@@ -73,11 +78,20 @@ namespace EticaretAPI.Presentation.Controllers
             return Ok(response);
         }
         [HttpDelete("[action]/{id}")]
+        [Authorize(AuthenticationSchemes = "Admin")]
         public async Task<IActionResult>DeleteProductImage([FromRoute, FromQuery] RemoveProductImageRequest request) 
         {
            RemoveProductImageResponse response= await _mediatR.Send(request);
             return Ok();
 
         }
+        [HttpGet("[action]")]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        public async Task<IActionResult> ChangeShowcaseImage([FromQuery]ChangeShowCaseImageCommandRequest changeShowCaseImageCommandRequest)
+        {
+          ChangeShowCaseImageCommandResponse response=  await _mediatR.Send(changeShowCaseImageCommandRequest);
+            return Ok(response);
+        }
+
     }
 }

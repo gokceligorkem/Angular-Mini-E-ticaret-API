@@ -240,6 +240,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\photo-images\Gorkem-jpeg-3728fcf0-6b85-4f0e-9782-ffecd1f41b5d.jpeg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\photo-images\Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg))">
+      <SourceType>Package</SourceType>
+      <SourceId>EticaretAPI.Presentation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EticaretAPI.Presentation</BasePath>
+      <RelativePath>photo-images/Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\photo-images\Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\photo-images\Gorkem-jpeg-a7163b9b-2a95-46ad-8381-31b25c991107.jpeg))">
       <SourceType>Package</SourceType>
       <SourceId>EticaretAPI.Presentation</SourceId>
