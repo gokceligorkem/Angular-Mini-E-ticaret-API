@@ -12,10 +12,7 @@ Delete işlemleri gibi directive yapılanmaları.(tek taraflı yönetme tabi sil
 ngx-file-drop upload merkezileştirilmesi.
 
 
-
-Öncelikle Aktif İş Arayışım Bulunmaktadır.😊 #OpenToWork
-
-Sayın Gençay Yıldız Hocamın Youtube Kanalında(https://lnkd.in/dSr6WvFg) Yayınlamış Olduğu .Net Core-Angular eğitim serisini tamamlamış bulunmaktayım, seri için bir kez daha teşekkür ediyor, kanalına göz atmanızı ve seriyi izlemenizi şiddetle tavsiye ediyorum...
+Sayın Gençay Yıldız Hocamın Youtube Kanalında(https://lnkd.in/dSr6WvFg) Yayınlamış Olduğu .Net Core-Angular eğitim serisidir. 
 
 
 
