@@ -1,4 +1,5 @@
-﻿using EticaretAPI.Application.Repository;
+﻿using EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.GetProductImage;
+using EticaretAPI.Application.Repository;
 using EticaretAPI.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
@@ -10,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.GetProductImage
+namespace EticaretAPI.Application.Feature_Özellikler_.Products.Queries.GetProductImage
 {
     public class GetProductCommandHandler : IRequestHandler<GetProductCommandRequest, List<GetProductCommandResponse>>
     {
@@ -43,7 +44,7 @@ namespace EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.Ge
             }
             else
             {
-             
+
                 return new List<GetProductCommandResponse>();
             }
         }

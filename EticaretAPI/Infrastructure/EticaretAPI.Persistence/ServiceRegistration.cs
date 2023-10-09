@@ -19,6 +19,8 @@ using EticaretAPI.Domain.Entities.Identity;
 using EticaretAPI.Application.Abstraction.Services;
 using EticaretAPI.Persistence.Services;
 using EticaretAPI.Application.Abstraction.Services.Authentications;
+using EticaretAPI.Application.Repository.Basket;
+using EticaretAPI.Application.Repository.BasketItem;
 
 namespace EticaretAPI.Persistence
 {
@@ -40,17 +42,27 @@ namespace EticaretAPI.Persistence
                 
             }).AddEntityFrameworkStores<EticaretDbContext>();
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
-            services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>();                 
+            services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>(); 
+            
             services.AddScoped<IProductReadRepository, ProductReadRepository>();
             services.AddScoped<IProductWriteRepository, ProductWriteRepository>();
+
             services.AddScoped<IOrderReadRepository, OrderReadRepository>();
             services.AddScoped<IOrderWritRepository, OrderWriterRepository>();
+
             services.AddScoped<IFileBaseReadRepository, FileReadRepository>();
             services.AddScoped<IFileBaseWriteRepository, FileWriteRepository>();
             services.AddScoped<IFileImageReadRepository, FileImageReadRepository>();
             services.AddScoped<IFileImageWriteRepository, FileImageWriteRepository>();
+
             services.AddScoped<IInvoiceReadRepository, InvoiceReadRepository>();
             services.AddScoped<IInvoiceWriteRepository, InvoiceWriteRepository>();
+
+            services.AddScoped<IBasketReadRepository, BasketReadRepository>();
+            services.AddScoped<IBasketWriteRepository, BasketWriteRepository>();
+            services.AddScoped<IBasketItemReadRepository, BasketItemReadRepository>();
+            services.AddScoped<IBasketItemWriteRepository, BasketItemWriteRepository>();
+
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();

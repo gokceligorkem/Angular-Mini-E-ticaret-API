@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.GetProductImage
+namespace EticaretAPI.Application.Feature_Özellikler_.Products.Queries.GetProductImage
 {
     public class GetProductCommandResponse
     {

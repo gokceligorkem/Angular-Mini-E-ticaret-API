@@ -20,7 +20,8 @@ using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddHttpContextAccessor();//Client tan gelen request neticesinde oluþturulan Httpcontext nesnesine katmanlardaki classlar
+//üzerinden (busineess logic ) eriþebilmemizi saðlayan bir servistir.
 builder.Services.AddPersistenceServices();//IoC container iletiþim
 builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationService();

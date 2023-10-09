@@ -3,6 +3,7 @@ using EticaretAPI.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,13 @@ namespace EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.Ge
     {
         IProductReadRepository _productReadRepository;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        readonly IConfiguration configuration;
 
-        public GetProductCommandHandler(IProductReadRepository productReadRepository, IWebHostEnvironment webHostEnvironment)
+        public GetProductCommandHandler(IProductReadRepository productReadRepository, IWebHostEnvironment webHostEnvironment, Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
             _productReadRepository = productReadRepository;
             _webHostEnvironment = webHostEnvironment;
+            this.configuration = configuration;
         }
 
         public async Task<List<GetProductCommandResponse>> Handle(GetProductCommandRequest request, CancellationToken cancellationToken)
