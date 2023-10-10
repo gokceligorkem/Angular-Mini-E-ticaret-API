@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tCpipROoFYTRcVTFHQWZvZko2geKWcYw5vV3dBxDjlbrvn1tu5sfOxiH+gAwvxVB6ZqmtKjt38qVURlT17IN4Q==",
+  "dgSpecHash": "sWOQ/jwGVsgX7KEx+pAyrymMpD+YwH8OySGuQyXllyXoh6xcVZGBKyzPl3HdwiUnIaGYKnoYmeBmmggXiEj7Aw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Infrastructure\\EticaretAPI.Persistence\\EticaretAPI.Persistence.csproj",
+  "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Infrastructure\\EticaretAPI.Persistence\\EticaretAPI.Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fls20\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

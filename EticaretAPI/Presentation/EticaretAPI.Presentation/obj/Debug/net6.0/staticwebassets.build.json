@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aoK0Q1AyiGJZK4hYuKbXKD3+koplPJ0Z31njoNzaBx8=",
+  "Hash": "8tYI/3YQDNtDtnzp6Dsm+CJFscF/iW+oj99UoSd66lM=",
   "Source": "EticaretAPI.Presentation",
   "BasePath": "_content/EticaretAPI.Presentation",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EticaretAPI.Presentation\\wwwroot",
       "Source": "EticaretAPI.Presentation",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\123213-jpeg-19e7b240-dfa2-4dbb-adaa-6f9622d8b9a5.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\123213-jpeg-19e7b240-dfa2-4dbb-adaa-6f9622d8b9a5.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/123213-jpeg-19e7b240-dfa2-4dbb-adaa-6f9622d8b9a5.jpeg",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\123213-jpeg-19e7b240-dfa2-4dbb-adaa-6f9622d8b9a5.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\123213-jpeg-6ad46688-4ecf-4389-99fa-cd5e4270073b.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\123213-jpeg-6ad46688-4ecf-4389-99fa-cd5e4270073b.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/123213-jpeg-6ad46688-4ecf-4389-99fa-cd5e4270073b.jpeg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\123213-jpeg-6ad46688-4ecf-4389-99fa-cd5e4270073b.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\123213-jpeg-ae3972e6-62b0-43e0-a105-43ee64f6929b.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\123213-jpeg-ae3972e6-62b0-43e0-a105-43ee64f6929b.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/123213-jpeg-ae3972e6-62b0-43e0-a105-43ee64f6929b.jpeg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\123213-jpeg-ae3972e6-62b0-43e0-a105-43ee64f6929b.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\123213-jpeg-d6ef3648-73e8-4980-8a4e-75b32fef84c5.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\123213-jpeg-d6ef3648-73e8-4980-8a4e-75b32fef84c5.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/123213-jpeg-d6ef3648-73e8-4980-8a4e-75b32fef84c5.jpeg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\123213-jpeg-d6ef3648-73e8-4980-8a4e-75b32fef84c5.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-025b4197-13f1-4238-a375-a368928f1a82.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-025b4197-13f1-4238-a375-a368928f1a82.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-025b4197-13f1-4238-a375-a368928f1a82.jpeg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-025b4197-13f1-4238-a375-a368928f1a82.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-3419ea77-2b96-438b-94d7-d20b87dd05a2.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-3419ea77-2b96-438b-94d7-d20b87dd05a2.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-3419ea77-2b96-438b-94d7-d20b87dd05a2.jpeg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-3419ea77-2b96-438b-94d7-d20b87dd05a2.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-61c44496-28ad-4bf1-befe-a5cfbcc1f55c.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-61c44496-28ad-4bf1-befe-a5cfbcc1f55c.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-61c44496-28ad-4bf1-befe-a5cfbcc1f55c.jpeg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-61c44496-28ad-4bf1-befe-a5cfbcc1f55c.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-673121f8-6c6b-41b0-ac4b-e4c9a075a5f7.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-673121f8-6c6b-41b0-ac4b-e4c9a075a5f7.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-673121f8-6c6b-41b0-ac4b-e4c9a075a5f7.jpeg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-673121f8-6c6b-41b0-ac4b-e4c9a075a5f7.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-a54f6f8f-bd99-4314-bed4-9be9e520e742.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-a54f6f8f-bd99-4314-bed4-9be9e520e742.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-a54f6f8f-bd99-4314-bed4-9be9e520e742.jpeg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-a54f6f8f-bd99-4314-bed4-9be9e520e742.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-a7e95f60-a66e-41e0-b96c-f6a6052222d5.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-a7e95f60-a66e-41e0-b96c-f6a6052222d5.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-a7e95f60-a66e-41e0-b96c-f6a6052222d5.jpeg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-a7e95f60-a66e-41e0-b96c-f6a6052222d5.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-b05ad947-d09b-45af-a6f0-428d6036f3df.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-b05ad947-d09b-45af-a6f0-428d6036f3df.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-b05ad947-d09b-45af-a6f0-428d6036f3df.jpeg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-b05ad947-d09b-45af-a6f0-428d6036f3df.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-b0d284a5-644a-450d-8d3e-629d735c27cc.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-b0d284a5-644a-450d-8d3e-629d735c27cc.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-b0d284a5-644a-450d-8d3e-629d735c27cc.jpeg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-b0d284a5-644a-450d-8d3e-629d735c27cc.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-eb20db11-d38e-4031-a372-18b99297fd50.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-eb20db11-d38e-4031-a372-18b99297fd50.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-eb20db11-d38e-4031-a372-18b99297fd50.jpeg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-eb20db11-d38e-4031-a372-18b99297fd50.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-f8afaa41-6097-478b-af14-f5001104490f.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\ccccoogg-jpeg-f8afaa41-6097-478b-af14-f5001104490f.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/ccccoogg-jpeg-f8afaa41-6097-478b-af14-f5001104490f.jpeg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\ccccoogg-jpeg-f8afaa41-6097-478b-af14-f5001104490f.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-3728fcf0-6b85-4f0e-9782-ffecd1f41b5d.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-3728fcf0-6b85-4f0e-9782-ffecd1f41b5d.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/Gorkem-jpeg-3728fcf0-6b85-4f0e-9782-ffecd1f41b5d.jpeg",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\Gorkem-jpeg-3728fcf0-6b85-4f0e-9782-ffecd1f41b5d.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\Gorkem-jpeg-6ec26c91-ab1f-45c8-9968-167b8e238dcd.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-a7163b9b-2a95-46ad-8381-31b25c991107.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-a7163b9b-2a95-46ad-8381-31b25c991107.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/Gorkem-jpeg-a7163b9b-2a95-46ad-8381-31b25c991107.jpeg",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\photo-images\\Gorkem-jpeg-a7163b9b-2a95-46ad-8381-31b25c991107.jpeg"
     },
     {
-      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-a89d2727-0105-4fca-b72a-69bcf699762e.jpeg",
+      "Identity": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\photo-images\\Gorkem-jpeg-a89d2727-0105-4fca-b72a-69bcf699762e.jpeg",
       "SourceId": "EticaretAPI.Presentation",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\wwwroot\\",
       "BasePath": "_content/EticaretAPI.Presentation",
       "RelativePath": "photo-images/Gorkem-jpeg-a89d2727-0105-4fca-b72a-69bcf699762e.jpeg",
       "AssetKind": "All",

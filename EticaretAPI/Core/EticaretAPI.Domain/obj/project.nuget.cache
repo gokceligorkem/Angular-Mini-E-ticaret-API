@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YwApRaeQFPfChaKzuhEa/Y0cLNDPbiKlQxz5ei7D/IiXOYPCc28Kee8v4RChrC2OM6caz+XKHL2o+ee2zqfSzQ==",
+  "dgSpecHash": "j9pqOIKWAAdtHH7WdT6DuRWiXrr9mHxpsk3EyPJJfoKq2sCQxVJyp/5Id021Fx8oOX6A6t6HV5qTDPHE11/SMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj",
+  "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fls20\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

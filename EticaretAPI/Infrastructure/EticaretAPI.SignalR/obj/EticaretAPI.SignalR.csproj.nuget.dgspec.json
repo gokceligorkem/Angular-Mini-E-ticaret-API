@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\EticaretAPI.SignalR.csproj": {}
+    "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\EticaretAPI.SignalR.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj": {
+    "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj",
         "projectName": "EticaretAPI.Application",
-        "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj",
+        "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj",
         "packagesPath": "C:\\Users\\fls20\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Application\\obj\\",
+        "outputPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fls20\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj"
+              "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj": {
+    "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj",
         "projectName": "EticaretAPI.Domain",
-        "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj",
+        "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Domain\\EticaretAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\fls20\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fls20\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\EticaretAPI.SignalR.csproj": {
+    "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\EticaretAPI.SignalR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\EticaretAPI.SignalR.csproj",
+        "projectUniqueName": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\EticaretAPI.SignalR.csproj",
         "projectName": "EticaretAPI.SignalR",
-        "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\EticaretAPI.SignalR.csproj",
+        "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\EticaretAPI.SignalR.csproj",
         "packagesPath": "C:\\Users\\fls20\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\obj\\",
+        "outputPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Infrastructure\\EticaretAPI.SignalR\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fls20\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -174,8 +174,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj"
+              "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj"
               }
             }
           }

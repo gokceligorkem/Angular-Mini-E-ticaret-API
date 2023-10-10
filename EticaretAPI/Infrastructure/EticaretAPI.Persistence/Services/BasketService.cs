@@ -24,7 +24,8 @@ namespace EticaretAPI.Persistence.Services
         readonly IBasketWriteRepository _basketWrite;
         readonly IBasketItemWriteRepository _basketItemWriteRepository;
         readonly IBasketItemReadRepository _basketItemReadRepository;
-        public BasketService(IHttpContextAccessor httpContextAccessor, UserManager<AppUser> userManager, IOrderReadRepository orderReadRepository, IBasketWriteRepository basketWrite, IBasketItemWriteRepository basketItemWriteRepository, IBasketItemReadRepository basketItemReadRepository)
+        readonly IBasketReadRepository _basketReadRepository;
+        public BasketService(IHttpContextAccessor httpContextAccessor, UserManager<AppUser> userManager, IOrderReadRepository orderReadRepository, IBasketWriteRepository basketWrite, IBasketItemWriteRepository basketItemWriteRepository, IBasketItemReadRepository basketItemReadRepository, IBasketReadRepository basketReadRepository)
         {
             _httpContextAccessor = httpContextAccessor;
             _userManager = userManager;
@@ -32,6 +33,7 @@ namespace EticaretAPI.Persistence.Services
             _basketWrite = basketWrite;
             _basketItemWriteRepository = basketItemWriteRepository;
             _basketItemReadRepository = basketItemReadRepository;
+            _basketReadRepository = basketReadRepository;
         }
         private async Task<Basket?> ContextUser()
         {
@@ -90,19 +92,40 @@ namespace EticaretAPI.Persistence.Services
             }
         }
 
-        public Task<List<BasketItem>> GetBasketItemAsync()
+        public async Task<List<BasketItem>> GetBasketItemAsync()
         {
-            throw new NotImplementedException();
+            Basket? basket = await ContextUser();
+           Basket? result= 
+                await _basketReadRepository.Table
+                .Include(b => b.BasketItem)
+                .ThenInclude(b => b.Product).
+                FirstOrDefaultAsync(b => b.ID == basket.ID);
+
+            return result.BasketItem.ToList();
         }
 
-        public Task RemoveBasketItemAsync(string basketItemId)
+        public async Task RemoveBasketItemAsync(string basketItemId)
         {
-            throw new NotImplementedException();
+            BasketItem? basketItem =await _basketItemReadRepository.GetByIdAsync(basketItemId);
+            if(basketItem != null)
+            {
+                _basketItemWriteRepository.Remove(basketItem);
+                await _basketItemWriteRepository.SaveAsync();
+            }
+            else
+            {
+                throw new Exception("Silinemedi");
+            }
         }
 
-        public Task UpdateQuantityAsync(VM_BasketItem_Update basketItem)
+        public async Task UpdateQuantityAsync(VM_BasketItem_Update basketItem)
         {
-            throw new NotImplementedException();
+            BasketItem? _basketItem = await _basketItemReadRepository.GetByIdAsync(basketItem.BasketItemId);
+            if(_basketItem != null)
+            {
+                _basketItem.Quantity = basketItem.Quantity;
+               await _basketItemWriteRepository.SaveAsync();
+            }
         }
     }
 }

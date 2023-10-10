@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4IAT0PFsa0DNgSSd/krGxLX6RhhS2N9EFUrFxwpnu9KtoaHUzicjZD0NctJSkTnCmv5H81wBGBM01pKNHoj6tg==",
+  "dgSpecHash": "xsSc1ZJwOaO262qucoc+oryZA2hrYhKaAl0LLFnuXsSjeFKWJhRoeINqjyvJJWGLP6ty0K7jYD7F1IDLXvqO4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj",
+  "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Core\\EticaretAPI.Application\\EticaretAPI.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fls20\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",

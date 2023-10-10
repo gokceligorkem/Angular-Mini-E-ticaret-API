@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JQPLJVyqEqRZYtQsOPB46xyKnBeUBHgCvpj9flSLVAk+OI4uQjwItbAx7aiLFrkec8/pxk8QVECl6S5qHokxIA==",
+  "dgSpecHash": "8UAKahw26Wn0Ho3HBc4nu7Epj48+dEVkg6lBbR8fv5tWbVrRSLlTSgjnHXz2XkwAbjPuLWp2OeqqYd1dT+THRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\AngularEticaretMvc\\EticaretAPI\\Infrastructure\\EticaretAPI.Infrastructure\\EticaretAPI.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Infrastructure\\EticaretAPI.Infrastructure\\EticaretAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fls20\\.nuget\\packages\\azure.core\\1.33.0\\azure.core.1.33.0.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\azure.storage.blobs\\12.17.0\\azure.storage.blobs.12.17.0.nupkg.sha512",
