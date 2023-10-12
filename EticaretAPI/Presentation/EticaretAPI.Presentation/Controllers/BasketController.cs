@@ -25,7 +25,7 @@ namespace EticaretAPI.Presentation.Controllers
         {
             List<GetBasketItemsCommandResponse> response = await _mediator.Send(request);
             return Ok(response);
-        }
+        } 
         [HttpPost]
         public async Task<IActionResult> AddBasketItems(AddBasketItemToBasketCommandRequest request)
         {
