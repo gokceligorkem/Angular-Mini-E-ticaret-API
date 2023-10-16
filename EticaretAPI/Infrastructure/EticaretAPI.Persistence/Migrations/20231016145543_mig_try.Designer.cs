@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace EticaretAPI.Persistence.Migrations
 {
     [DbContext(typeof(EticaretDbContext))]
-    [Migration("20230928124425_mig_5")]
-    partial class mig_5
+    [Migration("20231016145543_mig_try")]
+    partial class mig_try
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,82 @@ namespace EticaretAPI.Persistence.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.Basket", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("UpdatedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Baskets");
+                });
+
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.BasketItem", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("BasketId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("ProductId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("UpdatedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("BasketId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("BasketItems");
+                });
+
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.CompleteOrder", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("OrderId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("UpdatedTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("OrderId")
+                        .IsUnique();
+
+                    b.ToTable("CompleteOrders");
+                });
 
             modelBuilder.Entity("EticaretAPI.Domain.Entities.Customer", b =>
                 {
@@ -156,10 +232,9 @@ namespace EticaretAPI.Persistence.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("RefreshToken")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("RefreshTokenEndDate")
+                    b.Property<DateTime?>("RefreshTokenEndDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("SecurityStamp")
@@ -187,7 +262,6 @@ namespace EticaretAPI.Persistence.Migrations
             modelBuilder.Entity("EticaretAPI.Domain.Entities.Order", b =>
                 {
                     b.Property<Guid>("ID")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
                     b.Property<string>("Address")
@@ -197,10 +271,11 @@ namespace EticaretAPI.Persistence.Migrations
                     b.Property<DateTime>("CreatedTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("CustomerId")
-                        .HasColumnType("uuid");
-
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("OrderCode")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -208,8 +283,6 @@ namespace EticaretAPI.Persistence.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("CustomerId");
 
                     b.ToTable("Orders");
                 });
@@ -362,21 +435,6 @@ namespace EticaretAPI.Persistence.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("OrderProduct", b =>
-                {
-                    b.Property<Guid>("OrdersID")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("ProductsID")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("OrdersID", "ProductsID");
-
-                    b.HasIndex("ProductsID");
-
-                    b.ToTable("OrderProduct");
-                });
-
             modelBuilder.Entity("EticaretAPI.Domain.Entities.FileImage", b =>
                 {
                     b.HasBaseType("EticaretAPI.Domain.Entities.FileBase");
@@ -405,15 +463,56 @@ namespace EticaretAPI.Persistence.Migrations
                     b.HasDiscriminator().HasValue("InvoiceFile");
                 });
 
-            modelBuilder.Entity("EticaretAPI.Domain.Entities.Order", b =>
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.Basket", b =>
                 {
-                    b.HasOne("EticaretAPI.Domain.Entities.Customer", "Customer")
-                        .WithMany("Orders")
-                        .HasForeignKey("CustomerId")
+                    b.HasOne("EticaretAPI.Domain.Entities.Identity.AppUser", "User")
+                        .WithMany("Baskets")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Customer");
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.BasketItem", b =>
+                {
+                    b.HasOne("EticaretAPI.Domain.Entities.Basket", "Basket")
+                        .WithMany("BasketItem")
+                        .HasForeignKey("BasketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EticaretAPI.Domain.Entities.Product", "Product")
+                        .WithMany("BasketItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.CompleteOrder", b =>
+                {
+                    b.HasOne("EticaretAPI.Domain.Entities.Order", "Order")
+                        .WithOne("CompletedOrder")
+                        .HasForeignKey("EticaretAPI.Domain.Entities.CompleteOrder", "OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+                });
+
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.Order", b =>
+                {
+                    b.HasOne("EticaretAPI.Domain.Entities.Basket", "Basket")
+                        .WithOne("Order")
+                        .HasForeignKey("EticaretAPI.Domain.Entities.Order", "ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Basket");
                 });
 
             modelBuilder.Entity("FileImageProduct", b =>
@@ -482,24 +581,28 @@ namespace EticaretAPI.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OrderProduct", b =>
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.Basket", b =>
                 {
-                    b.HasOne("EticaretAPI.Domain.Entities.Order", null)
-                        .WithMany()
-                        .HasForeignKey("OrdersID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("BasketItem");
 
-                    b.HasOne("EticaretAPI.Domain.Entities.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.Navigation("Order")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("EticaretAPI.Domain.Entities.Customer", b =>
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.Identity.AppUser", b =>
                 {
-                    b.Navigation("Orders");
+                    b.Navigation("Baskets");
+                });
+
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.Order", b =>
+                {
+                    b.Navigation("CompletedOrder")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("EticaretAPI.Domain.Entities.Product", b =>
+                {
+                    b.Navigation("BasketItems");
                 });
 #pragma warning restore 612, 618
         }
