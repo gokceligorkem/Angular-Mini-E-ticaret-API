@@ -1,4 +1,5 @@
 ﻿using EticaretAPI.Application.Feature_Özellikler_.Orders.Command.CreateOrder;
+using EticaretAPI.Application.Feature_Özellikler_.Orders.Query.GetAllOrder;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -22,6 +23,12 @@ namespace EticaretAPI.Presentation.Controllers
         public async Task<IActionResult> CreateOrders(CreateOrderCommandRequest request)
         {
             CreateOrderCommandResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAllOrders([FromQuery]GetAllOrderQueryRequest request)
+        {
+            GetAllOrderQueryResponse response = await _mediator.Send(request);
             return Ok(response);
         }
     }

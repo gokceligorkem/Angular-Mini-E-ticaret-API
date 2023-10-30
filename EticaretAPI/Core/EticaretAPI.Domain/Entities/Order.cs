@@ -14,6 +14,7 @@ namespace EticaretAPI.Domain.Entities
            
             //public Guid BasketId { get; set; }
             public Basket Basket { get; set; }
+            public string OrderCode { get; set; }
 
       
     }

@@ -27,7 +27,7 @@ namespace EticaretAPI.Persistence.Contexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>().HasKey(b=>b.ID);
-
+            builder.Entity<Order>().HasIndex(o => o.OrderCode).IsUnique();
             builder.Entity<Basket>().HasOne(b => b.Order)
                 .WithOne(b => b.Basket)
                 .HasForeignKey<Order>(b => b.ID);
