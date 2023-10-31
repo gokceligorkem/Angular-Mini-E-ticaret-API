@@ -1,6 +1,7 @@
 ﻿using EticaretAPI.Application.Abstraction.Services;
 using EticaretAPI.Application.DTOs.Order;
 using EticaretAPI.Application.Repository;
+using EticaretAPI.Persistence.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace EticaretAPI.Persistence.Services
@@ -47,6 +48,7 @@ namespace EticaretAPI.Persistence.Services
                 TotalOrderCount = await query.CountAsync(),
                 Orders = await data.Select(o => new 
                 {
+                    ID = o.ID,
                     CreatedTime = o.CreatedTime,
                     OrderCode = o.OrderCode,
                     TotalPrice = o.Basket.BasketItem.Sum(bi => bi.Product.Price * bi.Quantity),
@@ -55,6 +57,28 @@ namespace EticaretAPI.Persistence.Services
                 }).ToListAsync()
             };
 
+        }
+
+        public async Task<SingleOrderDTO> GetByIdOrder(string id)
+        {
+            var data =await _orderReadRepository.Table.
+                Include(o => o.Basket).
+                ThenInclude(o => o.BasketItem).
+                ThenInclude(o => o.Product).FirstOrDefaultAsync(o=>o.ID==Guid.Parse(id));
+            return new()
+            {
+               Id=data.ID.ToString(),
+                BasketItems = data.Basket.BasketItem.Select(bi => new
+                {
+                    bi.Product.Name,
+                    bi.Product.Price,
+                    bi.Quantity
+                }),
+               Adress=data.Address,
+               CreatedTime=data.CreatedTime,
+               OrderCode=data.OrderCode,
+               Description=data.Description
+            };
         }
     }
 }

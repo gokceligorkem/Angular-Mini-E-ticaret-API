@@ -1,5 +1,7 @@
 ﻿using EticaretAPI.Application.Feature_Özellikler_.Orders.Command.CreateOrder;
 using EticaretAPI.Application.Feature_Özellikler_.Orders.Query.GetAllOrder;
+using EticaretAPI.Application.Feature_Özellikler_.Orders.Query.GetByIdOrder;
+using EticaretAPI.Application.Feature_Özellikler_.Products.Queries.GetByIdProduct;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -18,6 +20,12 @@ namespace EticaretAPI.Presentation.Controllers
         {
             _mediator = mediator;
         }
+        [HttpGet("{Id}")]
+        public async Task<IActionResult> GetByIdOrders([FromRoute] GetByIdQueryRequest request)
+        {
+            GetByIdQueryResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
 
         [HttpPost]
         public async Task<IActionResult> CreateOrders(CreateOrderCommandRequest request)
@@ -26,10 +34,11 @@ namespace EticaretAPI.Presentation.Controllers
             return Ok(response);
         }
         [HttpGet]
-        public async Task<IActionResult> GetAllOrders([FromQuery]GetAllOrderQueryRequest request)
+        public async Task<IActionResult> GetAllOrders([FromQuery] GetAllOrderQueryRequest request)
         {
             GetAllOrderQueryResponse response = await _mediator.Send(request);
             return Ok(response);
         }
+       
     }
 }
