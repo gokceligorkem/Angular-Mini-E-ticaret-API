@@ -31,12 +31,18 @@ namespace EticaretAPI.Presentation.Controllers
            CreateUserCommandResponse response=await _mediator.Send(createUserCommandRequest);
             return Ok(response);
         }
-        [HttpGet]
-        public  async Task<IActionResult> ExampleMail()
-        {
-            await _mailservice.SendMessageAsync("baranngunay@gmail.com", "Adammm", "<strong>Baran bey KVKK yı onaylıyor musunuz?</strong>");
-            return Ok();
-        }
+        //[HttpGet]
+        //public  async Task<IActionResult> ExampleMail()
+        //{
+        //    await _mailservice.SendMailAsync("baranngunay@gmail.com", "Adammm", "<strong>Baran bey KVKK yı onaylıyor musunuz?</strong>");
+        //    return Ok();
+        //}
 
+        [HttpPost("update-password")]
+        public async Task<IActionResult> UpdatePassword([FromBody]UpdatePasswordCommandRequest updatePassword)
+        {
+            UpdatePasswordCommandResponse response = await _mediator.Send(updatePassword);
+            return Ok(response);
+        }
     }
 }

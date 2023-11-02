@@ -1,7 +1,9 @@
 ﻿using EticaretAPI.Application.Feature_Özellikler_.AppUser.Command.FacebookLoginUserComamnd;
 using EticaretAPI.Application.Feature_Özellikler_.AppUser.Command.GoogLoginUserCommand;
 using EticaretAPI.Application.Feature_Özellikler_.AppUser.Command.LoginUserCommand;
+using EticaretAPI.Application.Feature_Özellikler_.AppUser.Command.PasswordResetCommand;
 using EticaretAPI.Application.Feature_Özellikler_.AppUser.Command.RefreshTokenCommand;
+using EticaretAPI.Application.Feature_Özellikler_.AppUser.Command.VerifyResetTokenCommand;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,6 +41,19 @@ namespace EticaretAPI.Presentation.Controllers
         public async Task<IActionResult> FacebookLogin(FacebookLoginCommandRequest facebookLoginCommandRequest)
         {
             FacebookloginCommandResponse response = await _mediator.Send(facebookLoginCommandRequest);
+            return Ok(response);
+        }
+        [HttpPost("password-reset")]
+        public async Task<IActionResult> PasswordReset([FromBody]PasswordResetCommandRequest passwordResetCommandRequest)
+        {
+            PasswordResetCommandResponse response = await _mediator.Send(passwordResetCommandRequest);
+            return Ok(response);
+        }
+        [HttpPost("verify-reset-token")]
+        public async Task<IActionResult> verifyResetToken([FromBody]VerifyResetTokenCommandRequest verifyResetTokenCommandRequest)
+        {
+            VerifyResetTokenCommandResponse response = await _mediator.Send(verifyResetTokenCommandRequest);
+
             return Ok(response);
         }
     }

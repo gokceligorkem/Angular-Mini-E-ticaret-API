@@ -21,6 +21,7 @@ using EticaretAPI.Persistence.Services;
 using EticaretAPI.Application.Abstraction.Services.Authentications;
 using EticaretAPI.Application.Repository.Basket;
 using EticaretAPI.Application.Repository.BasketItem;
+using Microsoft.AspNetCore.Identity;
 
 namespace EticaretAPI.Persistence
 {
@@ -40,7 +41,11 @@ namespace EticaretAPI.Persistence
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
                 
-            }).AddEntityFrameworkStores<EticaretDbContext>();
+            }).AddEntityFrameworkStores<EticaretDbContext>()
+            .AddDefaultTokenProviders();//GeneratePasswordResetTokenAsync eklemezsen fonksiyon hata verir.
+
+
+
             services.AddScoped<ICustomerReadRepository, CustomerReadRepository>();
             services.AddScoped<ICustomerWriteRepository, CustomerWriteRepository>(); 
             
