@@ -22,6 +22,8 @@ using EticaretAPI.Application.Abstraction.Services.Authentications;
 using EticaretAPI.Application.Repository.Basket;
 using EticaretAPI.Application.Repository.BasketItem;
 using Microsoft.AspNetCore.Identity;
+using EticaretAPI.Application.Repository.CompleteOrder;
+using EticaretAPI.Persistence.Repository.CompleteOrder;
 
 namespace EticaretAPI.Persistence
 {
@@ -69,6 +71,8 @@ namespace EticaretAPI.Persistence
             services.AddScoped<IBasketItemReadRepository, BasketItemReadRepository>();
             services.AddScoped<IBasketItemWriteRepository, BasketItemWriteRepository>();
 
+            services.AddScoped<ICompletedOrderWriteRepository, CompletedOrderWriteRepository>();
+            services.AddScoped<ICompletedOrderReadRepository, CompletedOrderReadRepository>();
 
 
             services.AddScoped<IOrderService, OrderService>();

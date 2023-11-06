@@ -1,6 +1,8 @@
 ﻿using EticaretAPI.Application.Abstraction.Services;
 using EticaretAPI.Application.DTOs.Order;
 using EticaretAPI.Application.Repository;
+using EticaretAPI.Application.Repository.CompleteOrder;
+using EticaretAPI.Domain.Entities;
 using EticaretAPI.Persistence.Repository;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,12 +12,18 @@ namespace EticaretAPI.Persistence.Services
     {
         readonly IOrderWritRepository _orderWriteRepository;
         readonly IOrderReadRepository _orderReadRepository;
+        readonly ICompletedOrderReadRepository _completedOrderRead;
+        readonly ICompletedOrderWriteRepository _completedOrderWrite;
 
-        public OrderService(IOrderWritRepository orderWriteRepository, IOrderReadRepository orderReadRepository)
+        public OrderService(IOrderWritRepository orderWriteRepository, IOrderReadRepository orderReadRepository, ICompletedOrderReadRepository completedOrderRead, ICompletedOrderWriteRepository completedOrderWrite)
         {
             _orderWriteRepository = orderWriteRepository;
             _orderReadRepository = orderReadRepository;
+            _completedOrderRead = completedOrderRead;
+            _completedOrderWrite = completedOrderWrite;
         }
+
+
 
         public async Task CreateOrderAsync(CreateOrderDTO createOrder)
         {
@@ -41,18 +49,32 @@ namespace EticaretAPI.Persistence.Services
                   .Include(o => o.Basket)
                   .ThenInclude(b => b.BasketItem)
                   .ThenInclude(p => p.Product);
-              
-             var data= query.Skip(page * size).Take(size);
+           
+
+            var data= query.Skip(page * size).Take(size);
+            var data2 = from order in data
+                        join completedOrder in _completedOrderRead.Table
+                        on order.ID equals completedOrder.OrderId into co
+                        from _co in co.DefaultIfEmpty()
+                        select new
+                        {
+                            ID = order.ID,
+                            CreatedTime = order.CreatedTime,
+                            OrderCode = order.OrderCode,
+                            Basket = order.Basket,
+                            Completed = _co != null ? true : false
+                        };
             return new()
             {
                 TotalOrderCount = await query.CountAsync(),
-                Orders = await data.Select(o => new 
+                Orders = await data2.Select(o => new 
                 {
                     ID = o.ID,
                     CreatedTime = o.CreatedTime,
                     OrderCode = o.OrderCode,
                     TotalPrice = o.Basket.BasketItem.Sum(bi => bi.Product.Price * bi.Quantity),
-                    Username = o.Basket.User.UserName
+                    Username = o.Basket.User.UserName,
+                    o.Completed
 
                 }).ToListAsync()
             };
@@ -61,24 +83,57 @@ namespace EticaretAPI.Persistence.Services
 
         public async Task<SingleOrderDTO> GetByIdOrder(string id)
         {
-            var data =await _orderReadRepository.Table.
+            var data =  _orderReadRepository.Table.
                 Include(o => o.Basket).
                 ThenInclude(o => o.BasketItem).
-                ThenInclude(o => o.Product).FirstOrDefaultAsync(o=>o.ID==Guid.Parse(id));
+                ThenInclude(o => o.Product);
+            var data2 =await (from order in data
+                        join completeOrder in _completedOrderRead.Table on order.ID equals completeOrder.OrderId
+                        into co
+                        from _co in co.DefaultIfEmpty()
+                        select new
+                        {
+                            ID = order.ID,
+                            CreatedTime = order.CreatedTime,
+                            OrderCode = order.OrderCode,
+                            Basket = order.Basket,
+                            Completed = _co != null ? true : false,
+                            Address = order.Address,
+                            Description=order.Description
+
+                        }).FirstOrDefaultAsync(o => o.ID == Guid.Parse(id));
+
+
+            //
             return new()
             {
-               Id=data.ID.ToString(),
-                BasketItems = data.Basket.BasketItem.Select(bi => new
+               Id=data2.ID.ToString(),
+                BasketItems = data2.Basket.BasketItem.Select(bi => new
                 {
                     bi.Product.Name,
                     bi.Product.Price,
                     bi.Quantity
                 }),
-               Adress=data.Address,
-               CreatedTime=data.CreatedTime,
-               OrderCode=data.OrderCode,
-               Description=data.Description
+               Adress=data2.Address,
+               CreatedTime=data2.CreatedTime,
+               OrderCode=data2.OrderCode,
+               Description=data2.Description,
+               Completed=data2.Completed
             };
+
+        }
+        public async Task CompleteOrderAsync(string id)
+        {
+            Order order=await _orderReadRepository.GetByIdAsync(id);
+            if(order != null)
+            {
+              await  _completedOrderWrite.AddAsync(new()
+                {
+                    OrderId=Guid.Parse(id)
+                });
+                await _completedOrderWrite.SaveAsync();
+            }
+            
         }
     }
 }

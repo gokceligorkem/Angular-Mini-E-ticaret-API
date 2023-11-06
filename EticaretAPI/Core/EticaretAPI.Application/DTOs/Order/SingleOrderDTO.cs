@@ -14,5 +14,6 @@ namespace EticaretAPI.Application.DTOs.Order
         public object BasketItems { get; set; }
         public DateTime CreatedTime { get; set; }
         public string OrderCode { get; set; }
+        public bool Completed { get;set; }
     }
 }

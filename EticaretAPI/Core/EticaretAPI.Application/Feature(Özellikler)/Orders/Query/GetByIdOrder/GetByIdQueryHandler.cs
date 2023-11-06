@@ -27,7 +27,8 @@ namespace EticaretAPI.Application.Feature_Özellikler_.Orders.Query.GetByIdOrder
                 BasketItems=data.BasketItems,
                 CreatedTime=data.CreatedTime,
                 Description=data.Description,
-                OrderCode= data.OrderCode
+                OrderCode= data.OrderCode,
+                Completed = data.Completed
             };
         }
     }

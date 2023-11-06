@@ -1,4 +1,5 @@
-﻿using EticaretAPI.Application.Feature_Özellikler_.Orders.Command.CreateOrder;
+﻿using EticaretAPI.Application.Feature_Özellikler_.Orders.Command.CompletedOrder;
+using EticaretAPI.Application.Feature_Özellikler_.Orders.Command.CreateOrder;
 using EticaretAPI.Application.Feature_Özellikler_.Orders.Query.GetAllOrder;
 using EticaretAPI.Application.Feature_Özellikler_.Orders.Query.GetByIdOrder;
 using EticaretAPI.Application.Feature_Özellikler_.Products.Queries.GetByIdProduct;
@@ -39,6 +40,12 @@ namespace EticaretAPI.Presentation.Controllers
             GetAllOrderQueryResponse response = await _mediator.Send(request);
             return Ok(response);
         }
-       
+        [HttpGet("complete-order/{Id}")]
+        public async Task<IActionResult> GetAllOrders([FromRoute]CompletedOrderCommandRequest request)
+        {
+            CompletedOrderCommandResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
     }
 }

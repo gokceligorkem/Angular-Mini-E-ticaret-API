@@ -24,6 +24,7 @@ namespace EticaretAPI.Persistence.Contexts
         public DbSet<InvoiceFile> Invoices { get; set; }
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<CompletedOrder> CompleteOrders { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>().HasKey(b=>b.ID);
@@ -32,6 +33,7 @@ namespace EticaretAPI.Persistence.Contexts
                 .WithOne(b => b.Basket)
                 .HasForeignKey<Order>(b => b.ID);
 
+            builder.Entity<Order>().HasOne(o => o.CompletedOrder).WithOne(o => o.Order).HasForeignKey<CompletedOrder>(c => c.OrderId);
             base.OnModelCreating(builder);
         }
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

@@ -14,5 +14,6 @@ namespace EticaretAPI.Application.Feature_Özellikler_.Orders.Query.GetByIdOrder
         public object BasketItems { get; set; }
         public DateTime CreatedTime { get; set; }
         public string OrderCode { get; set; }
+        public bool Completed { get; set; }
     }
 }
