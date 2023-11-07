@@ -62,7 +62,7 @@ namespace EticaretAPI.Infrastructure.Services.MailService
         }
         public async Task SendCompleteOrderMailAsync(string to, string orderCode, DateTime orderDate, string userName, string userSurname)   
         {
-            string mail = $"Sayın {userName}{userSurname}<br>" +
+            string mail = $" {userName}<br> Sayın {userSurname}<br>" +
                 $"{orderDate} tarihinde vermiş olduğunuz {orderCode} kodlu siparişiniz kargoya verilmiştir.<br>Elearning İyi Günler diler. ";
             await SendMailAsync(to, $"{orderCode} Sipariş numaralı Siparişiniz Tamamlandı", mail);
 

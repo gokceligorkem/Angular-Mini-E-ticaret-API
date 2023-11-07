@@ -1,4 +1,5 @@
 ﻿using EticaretAPI.Application.Abstraction.Services;
+using EticaretAPI.Application.DTOs.Order;
 using EticaretAPI.Application.Feature_Özellikler_.Orders.Command.CompletedOrder;
 using MediatR;
 using System;
@@ -13,15 +14,21 @@ namespace EticaretAPI.Application.Feature_Özellikler_.Orders.Command.CompletedO
 
     {
         readonly IOrderService _orderService;
+        readonly IMailService _mailService;
 
-        public CompletedOrderCommandHandler(IOrderService orderService)
+        public CompletedOrderCommandHandler(IOrderService orderService, IMailService mailService)
         {
             _orderService = orderService;
+            _mailService = mailService;
         }
 
         public async Task<CompletedOrderCommandResponse> Handle(CompletedOrderCommandRequest request, CancellationToken cancellationToken)
         {
-           await _orderService.CompleteOrderAsync(request.Id);
+           (bool succeseed, CompletedOrderDTO dto) =await _orderService.CompleteOrderAsync(request.Id);
+            if(succeseed)
+            {
+              await  _mailService.SendCompleteOrderMailAsync(dto.Email,dto.OrderCode,dto.OrderDate,dto.Username,dto.UserSurname);
+            }
             return new ();
         }
     }
