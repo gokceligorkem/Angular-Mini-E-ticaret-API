@@ -10,6 +10,9 @@ using EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.Remove
 using EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.GetProductImage;
 using Microsoft.AspNetCore.Authorization;
 using EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.ChangeShowCaseImage;
+using EticaretAPI.Application.Consts_Sabitler_;
+using EticaretAPI.Application.CustomAttribute;
+using EticaretAPI.Application.Enums;
 
 namespace EticaretAPI.Presentation.Controllers
 {
@@ -41,6 +44,7 @@ namespace EticaretAPI.Presentation.Controllers
 
         [HttpPost]
         [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefition(Menu = AuthorizeDefinitionConstants.Products, ActionType = ActionType.Writing, Definition = "Create Product")]
         public async Task<IActionResult> Post(CreateProductCommandRequest createProductCommandRequest)
         {
             CreateProductCommandResponse response = await _mediatR.Send(createProductCommandRequest);
@@ -48,6 +52,7 @@ namespace EticaretAPI.Presentation.Controllers
         }
         [HttpPut]
         [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefition(Menu = AuthorizeDefinitionConstants.Products, ActionType = ActionType.Updating, Definition = "Update Product")]
         public async Task<IActionResult> Put([FromBody] UpdateProductCommanRequest updateProductCommanRequest)
         {
             UpdateProductCommanResponse response = await _mediatR.Send(updateProductCommanRequest);
@@ -55,6 +60,7 @@ namespace EticaretAPI.Presentation.Controllers
         }
         [HttpDelete("{id}")]
         [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefition(Menu = AuthorizeDefinitionConstants.Products, ActionType = ActionType.Deleting, Definition = "Remove Product")]
         public async Task<IActionResult> Remove([FromRoute] DeleteProductCommandRequest deleteProductCommandRequest)
         {
             DeleteProductCommandResponse response = await _mediatR.Send(deleteProductCommandRequest);
@@ -62,6 +68,7 @@ namespace EticaretAPI.Presentation.Controllers
         }
         [HttpPost("[action]")]
         [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefition(Menu = AuthorizeDefinitionConstants.Products, ActionType = ActionType.Writing, Definition = "File image upload  Product")]
         public async Task<IActionResult> Upload([FromQuery] UploadProductCommandRequest uploadProductCommandRequest)
         {
 
@@ -72,6 +79,8 @@ namespace EticaretAPI.Presentation.Controllers
         }
 
         [HttpGet("[action]/{id}")]
+        [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefition(Menu = AuthorizeDefinitionConstants.Products, ActionType = ActionType.Reading, Definition = "Get Product  image")]
         public async Task<IActionResult> GetProductImages([FromRoute] GetProductCommandRequest getProductCommandRequest)
         {
           List<GetProductCommandResponse> response= await _mediatR.Send(getProductCommandRequest);
@@ -79,6 +88,7 @@ namespace EticaretAPI.Presentation.Controllers
         }
         [HttpDelete("[action]/{id}")]
         [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefition(Menu = AuthorizeDefinitionConstants.Products, ActionType = ActionType.Deleting, Definition = "Deleting  Product")]
         public async Task<IActionResult>DeleteProductImage([FromRoute, FromQuery] RemoveProductImageRequest request) 
         {
            RemoveProductImageResponse response= await _mediatR.Send(request);
@@ -87,6 +97,7 @@ namespace EticaretAPI.Presentation.Controllers
         }
         [HttpGet("[action]")]
         [Authorize(AuthenticationSchemes = "Admin")]
+        [AuthorizeDefition(Menu = AuthorizeDefinitionConstants.Products, ActionType = ActionType.Updating, Definition = "Update change show case ımage  Product")]
         public async Task<IActionResult> ChangeShowcaseImage([FromQuery]ChangeShowCaseImageCommandRequest changeShowCaseImageCommandRequest)
         {
           ChangeShowCaseImageCommandResponse response=  await _mediatR.Send(changeShowCaseImageCommandRequest);

@@ -1,7 +1,9 @@
 ﻿using EticaretAPI.Application.Abstraction.Services;
+using EticaretAPI.Application.Abstraction.Services.Configurations;
 using EticaretAPI.Application.Abstraction.Storage;
 using EticaretAPI.Application.Abstraction.Token;
 using EticaretAPI.Infrastructure.Enums;
+using EticaretAPI.Infrastructure.Services.Configuration;
 using EticaretAPI.Infrastructure.Services.MailService;
 using EticaretAPI.Infrastructure.Services.StorageConcrete;
 using EticaretAPI.Infrastructure.Services.StorageConcrete.Azure;
@@ -20,6 +22,7 @@ namespace EticaretAPI.Infrastructure
             serviceCollection.AddScoped<IStorageService, StogareService>();
             serviceCollection.AddScoped<ITokenHandler,TokenHandler>();
             serviceCollection.AddScoped<IMailService, MailService>();
+            serviceCollection.AddScoped<IApplicationService, ApplicationService>();
 
 
         }
