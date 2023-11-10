@@ -28,9 +28,7 @@ using EticaretAPI.Persistence.Repository.CompleteOrder;
 namespace EticaretAPI.Persistence
 {
     public static class ServiceRegistration
-    {
-       
-       
+    {    
         public static void AddPersistenceServices(this IServiceCollection services)
         {
          
@@ -82,6 +80,8 @@ namespace EticaretAPI.Persistence
             services.AddScoped<IExternalAuthentication, AuthService>();
             services.AddScoped<IInternalAuthentication, AuthService>();
             services.AddScoped<IBasketService, BasketService>();
+
+            services.AddScoped<IRoleService, RoleService>();
 
         }
     }
