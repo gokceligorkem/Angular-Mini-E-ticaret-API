@@ -25,6 +25,8 @@ namespace EticaretAPI.Persistence.Contexts
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<CompletedOrder> CompleteOrders { get; set; }
+        public DbSet<EndPoint> EndPoints { get; set; }
+        public DbSet<Menu> Menus { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Order>().HasKey(b=>b.ID);

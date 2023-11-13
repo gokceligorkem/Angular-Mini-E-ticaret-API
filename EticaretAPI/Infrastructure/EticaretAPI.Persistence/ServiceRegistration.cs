@@ -83,6 +83,17 @@ namespace EticaretAPI.Persistence
 
             services.AddScoped<IRoleService, RoleService>();
 
+            services.AddScoped<IMenuReadRepository, MenuReadRepository>();
+            services.AddScoped<IMenuWriteRepository, MenuWriteRepository>();
+
+            services.AddScoped<IEndPointReadRepository, EndPointReadRepository>();
+            services.AddScoped<IEndPointWriteRepository, EndPointWriteRepository>();
+
+
+            services.AddScoped<IAuthorizationEndPointService, AuthorizationEndPointService>();
+
+
+
         }
     }
 }

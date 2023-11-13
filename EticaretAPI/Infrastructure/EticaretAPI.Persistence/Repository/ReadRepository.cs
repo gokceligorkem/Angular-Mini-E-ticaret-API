@@ -50,5 +50,14 @@ namespace EticaretAPI.Persistence.Repository
                 query=query.AsNoTracking();
             return await query.FirstOrDefaultAsync(data => data.ID == Guid.Parse(id));
         }
+
+        public async Task<bool> Exist(Expression<Func<T, bool>> method, bool tracking = true)
+        {
+            var query = Table.AsQueryable();
+            if (!tracking)
+                query = query.AsNoTracking();
+
+            return await query.AnyAsync(method);
+        }
     }
 }

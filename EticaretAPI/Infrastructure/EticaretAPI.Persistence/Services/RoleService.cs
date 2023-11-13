@@ -1,4 +1,5 @@
 ﻿using EticaretAPI.Application.Abstraction.Services;
+using EticaretAPI.Application.Feature_Özellikler_.AppRoles.Query.GetRoles;
 using EticaretAPI.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -33,12 +34,14 @@ namespace EticaretAPI.Persistence.Services
 
         public (object, int) GetAllRoles(int page,int size)
         {
-           var data=  _roleManager.Roles
-        .Skip(page * size)
-        .Take(size)
-        .Select(r => new { r.Id, r.Name })
-        .ToList();
-            return (data, _roleManager.Roles.Count());  
+            var data = _roleManager.Roles;
+            IQueryable<AppRole> getRoles = null;
+            if (page != -1 && size != -1)
+                getRoles = data.Skip(page * size).Take(size);
+            else
+                getRoles = data;
+        
+            return (getRoles.Select(r => new { r.Id, r.Name }),data.Count());  
         }
 
         public async Task<(string id, string name)> GetRoleById(string id)
