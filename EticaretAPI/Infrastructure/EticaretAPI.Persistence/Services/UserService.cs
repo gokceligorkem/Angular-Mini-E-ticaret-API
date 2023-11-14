@@ -6,6 +6,7 @@ using EticaretAPI.Application.Helpers;
 using EticaretAPI.Domain.Entities.Identity;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace EticaretAPI.Persistence.Services
     public class UserService : IUserService
     {
         readonly UserManager<Domain.Entities.Identity.AppUser> _userManager;
+
 
         public UserService(UserManager<AppUser> userManager)
         {
@@ -74,5 +76,46 @@ namespace EticaretAPI.Persistence.Services
                     throw new PasswordChangeFailedException();
             }
         }
+
+        public async Task<List<GetListUserDTO>> GetAllUserAsync(int page, int size)
+        {
+           var users=await _userManager.Users
+                .Skip(page*size)
+                .Take(size).ToListAsync();
+
+            return users.Select(user => new GetListUserDTO
+            {
+                Id=user.Id,
+                Email=user.Email,
+                NameSurname=user.NameSurname,
+                UserName = user.UserName
+            }).ToList();
+        }
+
+        public async Task AssignRoleToUserAsync(string userId, string[] roles)
+        {
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            if (user != null)
+            {
+                var userRoles = await _userManager.GetRolesAsync(user);
+                await _userManager.RemoveFromRolesAsync(user, userRoles);
+
+                await _userManager.AddToRolesAsync(user, roles);
+            }
+        }
+
+        public async Task<string[]> GetRolesToUser(string userId)
+        {
+            AppUser user =await _userManager.FindByIdAsync(userId);
+            if (user!=null)
+            {
+                var userRoles= await _userManager.GetRolesAsync(user);
+                return userRoles.ToArray();
+            }
+            return new string[] {};
+        }
+
+        public int TotalUsersCount => _userManager.Users.Count();
+
     }
 }
