@@ -3,6 +3,8 @@ using EticaretAPI.Application.DTOs.User;
 using EticaretAPI.Application.Exceptions;
 using EticaretAPI.Application.Feature_Özellikler_.AppUser.Command;
 using EticaretAPI.Application.Helpers;
+using EticaretAPI.Application.Repository;
+using EticaretAPI.Domain.Entities;
 using EticaretAPI.Domain.Entities.Identity;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -18,11 +20,12 @@ namespace EticaretAPI.Persistence.Services
     public class UserService : IUserService
     {
         readonly UserManager<Domain.Entities.Identity.AppUser> _userManager;
+        readonly IEndPointReadRepository _endpointRead;
 
-
-        public UserService(UserManager<AppUser> userManager)
+        public UserService(UserManager<AppUser> userManager, IEndPointReadRepository endpointRead)
         {
             _userManager = userManager;
+            _endpointRead = endpointRead;
         }
 
         public async Task<CreateUserResponse> CreateAsync(CreateUser createUser)
@@ -104,15 +107,41 @@ namespace EticaretAPI.Persistence.Services
             }
         }
 
-        public async Task<string[]> GetRolesToUser(string userId)
+        public async Task<string[]> GetRolesToUser(string userIdOrName)
         {
-            AppUser user =await _userManager.FindByIdAsync(userId);
+            AppUser user =await _userManager.FindByIdAsync(userIdOrName);
+            if(user ==null)
+               user = await _userManager.FindByNameAsync(userIdOrName);
             if (user!=null)
             {
                 var userRoles= await _userManager.GetRolesAsync(user);
                 return userRoles.ToArray();
             }
             return new string[] {};
+        }
+
+        public async Task<bool> HasRolePermissionToEndPointAsync(string name, string code)
+        {
+            var userRoles =await GetRolesToUser(name);
+            if (!userRoles.Any()) return false;
+
+          EndPoint? endpoint= await _endpointRead.Table.
+                Include(e => e.Roles)
+                .FirstOrDefaultAsync(e=>e.Code==code);
+            if (endpoint == null)
+                return false;
+
+            var hasRole = false;
+
+            var endPointRoles = endpoint.Roles.Select(e => e.Name);
+            foreach(var userRole in userRoles)
+            {
+                foreach (var endPointRole in endPointRoles)
+                    if (userRole == endPointRole)
+                        return true;
+            }
+            return false;
+
         }
 
         public int TotalUsersCount => _userManager.Users.Count();

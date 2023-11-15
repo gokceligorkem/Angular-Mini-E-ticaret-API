@@ -16,6 +16,7 @@ namespace EticaretAPI.Application.Abstraction.Services
         Task<List<GetListUserDTO>> GetAllUserAsync(int page,int size);
         int TotalUsersCount { get; }
         Task AssignRoleToUserAsync(string userId, string[] Roles);
-        Task<string[]> GetRolesToUser(string userId);
+        Task<string[]> GetRolesToUser(string userIdOrName);
+        Task<bool> HasRolePermissionToEndPointAsync(string name,string code);
     }
 }

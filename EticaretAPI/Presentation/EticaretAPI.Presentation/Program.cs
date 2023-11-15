@@ -6,6 +6,7 @@ using EticaretAPI.Infrastructure.Services.StorageConcrete.Local;
 using EticaretAPI.Persistence;
 using EticaretAPI.Presentation.Configurations.ColumnWriters;
 using EticaretAPI.Presentation.Exceptions;
+using EticaretAPI.Presentation.Filters;
 using EticaretAPI.SignalR;
 using EticaretAPI.SignalR.Hubs;
 using FluentValidation.AspNetCore;
@@ -67,9 +68,16 @@ builder.Services.AddHttpLogging(logging =>
 
 });
 
-builder.Services.AddControllers(options=>options.Filters.Add<ValidationFilter>())
-    .AddFluentValidation(configuration => configuration.RegisterValidatorsFromAssemblyContaining<CreateProductValid>())
-    .ConfigureApiBehaviorOptions(options=>options.SuppressModelStateInvalidFilter=true);
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<ValidationFilter>();
+    options.Filters.Add<RolePermissionFilter>();
+})
+    .AddFluentValidation(configuration => 
+    { 
+        configuration.RegisterValidatorsFromAssemblyContaining<CreateProductValid>(); 
+    }).ConfigureApiBehaviorOptions(options=>options.SuppressModelStateInvalidFilter=true);
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
