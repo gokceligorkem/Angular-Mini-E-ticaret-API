@@ -3,6 +3,7 @@ using EticaretAPI.Application.Abstraction.Services.Configurations;
 using EticaretAPI.Application.Abstraction.Storage;
 using EticaretAPI.Application.Abstraction.Token;
 using EticaretAPI.Infrastructure.Enums;
+using EticaretAPI.Infrastructure.Services;
 using EticaretAPI.Infrastructure.Services.Configuration;
 using EticaretAPI.Infrastructure.Services.MailService;
 using EticaretAPI.Infrastructure.Services.StorageConcrete;
@@ -23,6 +24,7 @@ namespace EticaretAPI.Infrastructure
             serviceCollection.AddScoped<ITokenHandler,TokenHandler>();
             serviceCollection.AddScoped<IMailService, MailService>();
             serviceCollection.AddScoped<IApplicationService, ApplicationService>();
+            serviceCollection.AddScoped<IQRCodeService, QRCodeService>();
 
 
         }

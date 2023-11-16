@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mpUzugEy4kCNbJ9Tb0fSrBA98SPcjg+pA87ByeL+UIcNEt+5+XYvWexXSPxqkRBrPgPWjTxBtDVO27GiX8JUMw==",
+  "dgSpecHash": "24TjZT9Umy3oduogswJDcPqdG3P9y9FMDgB8zFsgrogSz3U6is7SkuAqOaMgoZKUSLq5i02aRiuEoFt22I9g/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Presentation\\EticaretAPI.Presentation\\EticaretAPI.Presentation.csproj",
   "expectedPackageFiles": [
@@ -77,6 +77,7 @@
     "C:\\Users\\fls20\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\npgsql\\6.0.8\\npgsql.6.0.8.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.8\\npgsql.entityframeworkcore.postgresql.6.0.8.nupkg.sha512",
+    "C:\\Users\\fls20\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\serilog.aspnetcore\\6.1.0\\serilog.aspnetcore.6.1.0.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\serilog.extensions.hosting\\5.0.1\\serilog.extensions.hosting.5.0.1.nupkg.sha512",

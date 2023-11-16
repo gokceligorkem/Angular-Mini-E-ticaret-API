@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8UAKahw26Wn0Ho3HBc4nu7Epj48+dEVkg6lBbR8fv5tWbVrRSLlTSgjnHXz2XkwAbjPuLWp2OeqqYd1dT+THRw==",
+  "dgSpecHash": "FxfbyaH9BL2RuCJiAG9SPBwOQQzetJ9EiV8UKDZhg3UZN97QvKw8EwbFEmQmQpqGj6H0y1+sWBG/00l4j1EHaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\fls20\\OneDrive\\Masaüstü\\JavascriptProjeleri\\Angular-Mini-E-ticaret-API\\EticaretAPI\\Infrastructure\\EticaretAPI.Infrastructure\\EticaretAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -59,6 +59,7 @@
     "C:\\Users\\fls20\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
+    "C:\\Users\\fls20\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\fls20\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

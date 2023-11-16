@@ -190,3 +190,4 @@ C:\Users\fls20\OneDrive\Masaüstü\JavascriptProjeleri\Angular-Mini-E-ticaret-AP
 C:\Users\fls20\OneDrive\Masaüstü\JavascriptProjeleri\Angular-Mini-E-ticaret-API\EticaretAPI\Presentation\EticaretAPI.Presentation\obj\Debug\net6.0\EticaretAPI.Presentation.pdb
 C:\Users\fls20\OneDrive\Masaüstü\JavascriptProjeleri\Angular-Mini-E-ticaret-API\EticaretAPI\Presentation\EticaretAPI.Presentation\obj\Debug\net6.0\EticaretAPI.Presentation.genruntimeconfig.cache
 C:\Users\fls20\OneDrive\Masaüstü\JavascriptProjeleri\Angular-Mini-E-ticaret-API\EticaretAPI\Presentation\EticaretAPI.Presentation\obj\Debug\net6.0\ref\EticaretAPI.Presentation.dll
+C:\Users\fls20\OneDrive\Masaüstü\JavascriptProjeleri\Angular-Mini-E-ticaret-API\EticaretAPI\Presentation\EticaretAPI.Presentation\bin\Debug\net6.0\QRCoder.dll

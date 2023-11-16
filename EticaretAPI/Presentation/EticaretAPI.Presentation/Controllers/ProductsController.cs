@@ -13,6 +13,7 @@ using EticaretAPI.Application.Feature_Özellikler_.Products.ProductsImage.Change
 using EticaretAPI.Application.Consts_Sabitler_;
 using EticaretAPI.Application.CustomAttribute;
 using EticaretAPI.Application.Enums;
+using EticaretAPI.Application.Abstraction.Services;
 
 namespace EticaretAPI.Presentation.Controllers
 {
@@ -23,10 +24,11 @@ namespace EticaretAPI.Presentation.Controllers
     {
 
         readonly IMediator _mediatR;
-
-        public ProductsController(IMediator mediatR)
+        readonly IProductService _productService;
+        public ProductsController(IMediator mediatR, IProductService productService)
         {
             _mediatR = mediatR;
+            _productService = productService;
         }
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] GetAllProductQueryRequest getAllProductQueryRequest)
@@ -102,6 +104,13 @@ namespace EticaretAPI.Presentation.Controllers
         {
           ChangeShowCaseImageCommandResponse response=  await _mediatR.Send(changeShowCaseImageCommandRequest);
             return Ok(response);
+        }
+
+        [HttpGet("qrcode/{productId}")]
+        public async Task<IActionResult> QRCodeGetProduct([FromRoute]string productId)
+        {
+            var qrCode = await _productService.QRCodeToProductAsync(productId);
+            return File(qrCode,"image/png");
         }
 
     }

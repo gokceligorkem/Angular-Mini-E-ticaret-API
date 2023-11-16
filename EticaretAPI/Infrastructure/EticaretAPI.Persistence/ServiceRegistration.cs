@@ -92,7 +92,7 @@ namespace EticaretAPI.Persistence
 
             services.AddScoped<IAuthorizationEndPointService, AuthorizationEndPointService>();
 
-
+            services.AddScoped<IProductService, ProductService>();
 
         }
     }
