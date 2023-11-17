@@ -9,10 +9,12 @@ namespace EticaretAPI.Persistence.Services
     {
         readonly IProductReadRepository _readRepository;
         readonly IQRCodeService _qrService;
-        public ProductService(IProductReadRepository readRepository, IQRCodeService qrService)
+        readonly IProductWriteRepository _writeRepository;
+        public ProductService(IProductReadRepository readRepository, IQRCodeService qrService, IProductWriteRepository writeRepository)
         {
             _readRepository = readRepository;
             _qrService = qrService;
+            _writeRepository = writeRepository;
         }
 
         public async Task<byte[]> QRCodeToProductAsync(string productId)
@@ -31,6 +33,15 @@ namespace EticaretAPI.Persistence.Services
             };
             string plainText = JsonSerializer.Serialize(plainObject);
            return _qrService.GeneratQRCode(plainText);
+        }
+
+        public async Task StockUpdateToProductAsync(string productId, int stock)
+        {
+            Product product = await _readRepository.GetByIdAsync(productId);
+            if (product == null)
+                throw new Exception("Product not found");
+            product.Stock = stock;
+            await _writeRepository.SaveAsync();
         }
     }
 }

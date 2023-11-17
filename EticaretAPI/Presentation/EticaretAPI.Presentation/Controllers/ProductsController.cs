@@ -14,6 +14,7 @@ using EticaretAPI.Application.Consts_Sabitler_;
 using EticaretAPI.Application.CustomAttribute;
 using EticaretAPI.Application.Enums;
 using EticaretAPI.Application.Abstraction.Services;
+using EticaretAPI.Application.Feature_Özellikler_.Products.Command.QRCodeUpdateProduct;
 
 namespace EticaretAPI.Presentation.Controllers
 {
@@ -111,6 +112,12 @@ namespace EticaretAPI.Presentation.Controllers
         {
             var qrCode = await _productService.QRCodeToProductAsync(productId);
             return File(qrCode,"image/png");
+        }
+        [HttpPut("qrcode")]
+        public async Task<IActionResult> QRCodeUpdateProduct([FromBody] QRProductUpdateRequest request)
+        {
+            QRProductUpdateResponse response = await _mediatR.Send(request);
+            return Ok(response);
         }
 
     }
